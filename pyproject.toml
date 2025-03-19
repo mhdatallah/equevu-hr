@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "equevu-hr"
+version = "0.1.0"
+description = "A Tiny HR System for managing job applicants"
+authors = ["Mohammad Atallah <mohammad.atallah@example.com>"]
+packages = [
+    { include = "config" },
+    { include = "apps" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.2"
+djangorestframework = "^3.14.0"
+django-cors-headers = "^4.3.1"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.1"
+django-storages = "^1.14.2"
+boto3 = "^1.34.34"
+django-filter = "^23.5"
+drf-yasg = "^1.21.7"
+dj-database-url = "^2.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-django = "^4.8.0"
+pytest-cov = "^4.1.0"
+black = "^24.1.1"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3 
